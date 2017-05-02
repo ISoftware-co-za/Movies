@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Movies.View.Android" android:versionCode="1" android:versionName="1.0" android:theme="@style/Movies" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="16" />
+	<application android:label="Movies.View.Android" android:theme="@style/Movies"></application>
+</manifest>

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="12">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="11">
+            <objects>
+                <navigationController id="12" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="14">
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="135" destination="21" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1174" y="-457"/>
+        </scene>
+        <scene sceneID="20">
+            <objects>
+                <viewController id="21" sceneMemberID="viewController" customClass="ViewControllerSearch" storyboardIdentifier="ViewControllerSearch" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="18"/>
+                        <viewControllerLayoutGuide type="bottom" id="19"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="22">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" id="137" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="142" firstItem="137" firstAttribute="height" constant="44"/>
+                                </constraints>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="143" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="8" y="116" width="584" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="144">
+                                        <rect key="frame" x="0.0" y="28" width="584" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="144" id="145">
+                                            <rect key="frame" x="0.0" y="0.0" width="584" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="138" firstItem="137" firstAttribute="top" secondItem="18" secondAttribute="bottom"/>
+                            <constraint id="139" firstItem="137" firstAttribute="leading" secondItem="22" secondAttribute="leading"/>
+                            <constraint id="140" firstItem="22" firstAttribute="trailing" secondItem="137" secondAttribute="trailing"/>
+                            <constraint id="146" firstItem="143" firstAttribute="top" secondItem="137" secondAttribute="bottom" constant="8"/>
+                            <constraint id="147" firstItem="143" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="8"/>
+                            <constraint id="148" firstItem="22" firstAttribute="trailing" secondItem="143" secondAttribute="trailing" constant="8"/>
+                            <constraint id="149" firstItem="19" firstAttribute="top" secondItem="143" secondAttribute="bottom" constant="8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="Search" id="134" key="navigationItem"/>
+                    <connections>
+                        <outlet property="SearchTerm" destination="137" id="name-outlet-137"/>
+                        <outlet property="SearchResults" destination="143" id="name-outlet-143"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455" y="-458"/>
+        </scene>
+        <scene sceneID="156">
+            <objects>
+                <viewController id="157" sceneMemberID="viewController" customClass="ViewControllerMovieDetails" storyboardIdentifier="ViewControllerMovieDetails">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="154"/>
+                        <viewControllerLayoutGuide type="bottom" id="155"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="158">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" id="161" translatesAutoresizingMaskIntoConstraints="NO" distribution="fillEqually" spacing="16" misplaced="YES">
+                                <rect key="frame" x="8" y="28" width="166" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="165" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="300"/>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="169" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="91" y="0.0" width="75" height="300"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="170">
+                                                <rect key="frame" x="0.0" y="28" width="75" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="170" id="171">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0" green="0.52549019607843139" blue="1" alpha="1"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="172" firstItem="161" firstAttribute="height" constant="300"/>
+                                </constraints>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.60392156862745094" green="0.73725490196078436" blue="0.10588235294117647" alpha="1"/>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="173" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="8" y="336" width="584" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <constraints>
+                                    <constraint id="184" firstItem="173" firstAttribute="height" constant="130"/>
+                                </constraints>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="177" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="8" y="474" width="109" height="30"/>
+                                <state key="normal" title="iMDb website">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="179" firstItem="177" firstAttribute="height" constant="30"/>
+                                    <constraint id="181" firstItem="177" firstAttribute="width" constant="109"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="162" firstItem="161" firstAttribute="top" secondItem="154" secondAttribute="bottom" constant="8"/>
+                            <constraint id="163" firstItem="161" firstAttribute="leading" secondItem="158" secondAttribute="leading" constant="8"/>
+                            <constraint id="174" firstItem="158" firstAttribute="trailing" secondItem="173" secondAttribute="trailing" constant="8"/>
+                            <constraint id="176" firstItem="173" firstAttribute="leading" secondItem="158" secondAttribute="leading" constant="8"/>
+                            <constraint id="180" firstItem="177" firstAttribute="leading" secondItem="158" secondAttribute="leading" constant="8"/>
+                            <constraint id="200" firstItem="158" firstAttribute="trailing" secondItem="161" secondAttribute="trailing" constant="8"/>
+                            <constraint id="201" firstItem="173" firstAttribute="top" secondItem="161" secondAttribute="bottom" constant="8"/>
+                            <constraint id="202" firstItem="177" firstAttribute="top" secondItem="173" secondAttribute="bottom" constant="8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Poster" destination="161" id="name-outlet-161"/>
+                        <outlet property="Plot" destination="173" id="name-outlet-173"/>
+                        <outlet property="MovieAttributes" destination="169" id="name-outlet-169"/>
+                        <outlet property="Poster" destination="165" id="name-outlet-165"/>
+                        <outlet property="IMDBWebsite" destination="177" id="name-outlet-177"/>
+                    </connections>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="159" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="-462"/>
+        </scene>
+    </scenes>
+</document>
