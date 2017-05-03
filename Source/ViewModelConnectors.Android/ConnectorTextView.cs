@@ -24,6 +24,8 @@ namespace ViewModelConnectors.Android
                         editText.Text = propertyInfo.GetValue(viewModel)?.ToString();
                 };
             }
+
+            editText.Text = propertyInfo.GetValue(viewModel)?.ToString();
         }
     }
 }

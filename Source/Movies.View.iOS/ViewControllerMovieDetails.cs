@@ -38,6 +38,18 @@ namespace Movies.View.iOS
             });
             new ConnectorUITextView(Plot, _viewModel, nameof(ViewModelMovieDetails.Plot));
             new ConnectorUIButton(IMDBWebsite, _viewModel.CommandBrowseToMovie);
+
+            _viewModel.PropertyChanged += (sender, args) =>
+            {
+                if (args.PropertyName == nameof(ViewModelMovieDetails.Title))
+                    SetNavigationBarTitle();
+            };
+            SetNavigationBarTitle();
+        }
+
+        private void SetNavigationBarTitle()
+        {
+            NavigationItem.Title = _viewModel.Title;
         }
 
         private readonly ViewModelMovieDetails _viewModel;

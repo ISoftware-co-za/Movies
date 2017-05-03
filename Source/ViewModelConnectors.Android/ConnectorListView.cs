@@ -44,6 +44,10 @@ namespace ViewModelConnectors.Android
                 };
             }
 
+            IList<T> listItems = listPropertyInfo.GetValue(viewModel) as IList<T>;
+
+            if (listItems != null && listItems.Count > 0)
+                listAdapter.SetItems(listItems);
             listView.Adapter = listAdapter;
         }
 
